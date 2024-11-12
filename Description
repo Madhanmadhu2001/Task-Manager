@@ -1,0 +1,37 @@
+Key Features and Workflow:
+1. File Handling (Data Persistence):
+Reading Existing Data:
+The program first attempts to load patient data from the file patientsList.txt. Each line in the file represents one patient, with details like name, ID, medication, and room number separated by commas. If the file is found, it reads the data and loads it into a list (patientsList), with each element being a list of patient attributes.
+
+Handling File Not Found:
+If patientsList.txt does not exist, the program catches the FileNotFoundError and prints a message informing the user that the file is missing. It then starts a new empty list to store patient information.
+
+2. Menu and Options:
+The user is presented with a menu of options. The program runs in a loop, and the user is asked to select an option by entering a number (1 to 5). The options are:
+
+Option 1: Add a Patient
+
+Prompts the user to input the patient's name, ID, medication, and room number.
+The patient's information is then appended to the patientsList.
+Option 2: Get Patient Information
+
+The user enters the name of a patient.
+The program searches the patientsList for patients whose name matches the input (case-insensitive).
+If a match is found, the patient's details are displayed. If no match is found, the program informs the user.
+Option 3: Display All Patients
+
+Displays all patients in the list with their respective details (name, ID, medication, room number).
+If the list is empty, it informs the user that there are no patients.
+Option 4: Delete a Patient
+
+The user enters the name of the patient to delete.
+The program searches for the patient in the list and deletes the matching record. If the patient is not found, it notifies the user.
+Option 5: Quit the Program
+
+Exits the program.
+3. Error Handling:
+Invalid Input Handling:
+If the user inputs a non-numeric value when asked for a menu choice, the program catches the ValueError and prompts the user to enter a valid number between 1 and 5.
+4. Saving Data:
+Once the user exits the program (by choosing option 5), the program saves any changes made to the patient list (additions or deletions) back to the patientsList.txt file.
+This ensures that the data persists for future use.
